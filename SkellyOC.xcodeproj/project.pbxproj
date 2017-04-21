@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		B14478DF1E313E420052ABB2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B14478DE1E313E420052ABB2 /* main.m */; };
 		B14478E21E313E420052ABB2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B14478E11E313E420052ABB2 /* AppDelegate.m */; };
-		B14478E51E313E420052ABB2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B14478E41E313E420052ABB2 /* ViewController.m */; };
+		B14478E51E313E420052ABB2 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B14478E41E313E420052ABB2 /* HomeViewController.m */; };
 		B14478E81E313E420052ABB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B14478E61E313E420052ABB2 /* Main.storyboard */; };
-		B14478EA1E313E420052ABB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B14478E91E313E420052ABB2 /* Assets.xcassets */; };
 		B14478ED1E313E420052ABB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B14478EB1E313E420052ABB2 /* LaunchScreen.storyboard */; };
 		B14478F81E313E420052ABB2 /* SkellyOCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B14478F71E313E420052ABB2 /* SkellyOCTests.m */; };
 		B14479031E313E420052ABB2 /* SkellyOCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B14479021E313E420052ABB2 /* SkellyOCUITests.m */; };
+		B1ADCFD81EA94F2700E627CF /* ScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1ADCFD71EA94F2700E627CF /* ScrollViewController.m */; };
+		B1FB56641EA9119A003E5453 /* SkellyArt in Resources */ = {isa = PBXBuildFile; fileRef = B1FB56631EA9119A003E5453 /* SkellyArt */; };
+		B1FB56661EA918ED003E5453 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1FB56651EA918ED003E5453 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,10 +41,9 @@
 		B14478DE1E313E420052ABB2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B14478E01E313E420052ABB2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B14478E11E313E420052ABB2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B14478E31E313E420052ABB2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B14478E41E313E420052ABB2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B14478E31E313E420052ABB2 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		B14478E41E313E420052ABB2 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		B14478E71E313E420052ABB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B14478E91E313E420052ABB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B14478EC1E313E420052ABB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B14478EE1E313E420052ABB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B14478F31E313E420052ABB2 /* SkellyOCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkellyOCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +52,10 @@
 		B14478FE1E313E420052ABB2 /* SkellyOCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkellyOCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B14479021E313E420052ABB2 /* SkellyOCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkellyOCUITests.m; sourceTree = "<group>"; };
 		B14479041E313E420052ABB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1ADCFD71EA94F2700E627CF /* ScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewController.m; sourceTree = "<group>"; };
+		B1ADCFD91EA94F6700E627CF /* ScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollViewController.h; sourceTree = "<group>"; };
+		B1FB56631EA9119A003E5453 /* SkellyArt */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SkellyArt; path = ../../SkellyArt; sourceTree = "<group>"; };
+		B1FB56651EA918ED003E5453 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +108,15 @@
 			children = (
 				B14478E01E313E420052ABB2 /* AppDelegate.h */,
 				B14478E11E313E420052ABB2 /* AppDelegate.m */,
-				B14478E31E313E420052ABB2 /* ViewController.h */,
-				B14478E41E313E420052ABB2 /* ViewController.m */,
+				B14478E31E313E420052ABB2 /* HomeViewController.h */,
+				B14478E41E313E420052ABB2 /* HomeViewController.m */,
+				B1ADCFD91EA94F6700E627CF /* ScrollViewController.h */,
+				B1ADCFD71EA94F2700E627CF /* ScrollViewController.m */,
 				B14478E61E313E420052ABB2 /* Main.storyboard */,
-				B14478E91E313E420052ABB2 /* Assets.xcassets */,
 				B14478EB1E313E420052ABB2 /* LaunchScreen.storyboard */,
+				B1FB56651EA918ED003E5453 /* Assets.xcassets */,
 				B14478EE1E313E420052ABB2 /* Info.plist */,
+				B1FB56621EA9115F003E5453 /* Images */,
 				B14478DD1E313E420052ABB2 /* Supporting Files */,
 			);
 			path = SkellyOC;
@@ -138,6 +146,14 @@
 				B14479041E313E420052ABB2 /* Info.plist */,
 			);
 			path = SkellyOCUITests;
+			sourceTree = "<group>";
+		};
+		B1FB56621EA9115F003E5453 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B1FB56631EA9119A003E5453 /* SkellyArt */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,8 +262,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1FB56641EA9119A003E5453 /* SkellyArt in Resources */,
 				B14478ED1E313E420052ABB2 /* LaunchScreen.storyboard in Resources */,
-				B14478EA1E313E420052ABB2 /* Assets.xcassets in Resources */,
+				B1FB56661EA918ED003E5453 /* Assets.xcassets in Resources */,
 				B14478E81E313E420052ABB2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,9 +290,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B14478E51E313E420052ABB2 /* ViewController.m in Sources */,
+				B14478E51E313E420052ABB2 /* HomeViewController.m in Sources */,
 				B14478E21E313E420052ABB2 /* AppDelegate.m in Sources */,
 				B14478DF1E313E420052ABB2 /* main.m in Sources */,
+				B1ADCFD81EA94F2700E627CF /* ScrollViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +525,7 @@
 				B14479091E313E420052ABB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B144790A1E313E420052ABB2 /* Build configuration list for PBXNativeTarget "SkellyOCTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +534,7 @@
 				B144790C1E313E420052ABB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B144790D1E313E420052ABB2 /* Build configuration list for PBXNativeTarget "SkellyOCUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +543,7 @@
 				B144790F1E313E420052ABB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

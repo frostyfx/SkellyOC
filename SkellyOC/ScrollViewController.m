@@ -22,7 +22,7 @@
     if (item.tag == 0) {
         HomeViewController *homeVC = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
         [homeVC setModalTransitionStyle:UIModalTransitionStyleCoverVertical];
-        [self.navigationController pushViewController:homeVC animated:YES];
+        [self.navigationController popToRootViewControllerAnimated:YES];
     }
     if (item.tag == 1) {
         [self.navigationController popViewControllerAnimated:YES];

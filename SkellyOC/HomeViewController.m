@@ -7,6 +7,9 @@
 //
 
 #import "HomeViewController.h"
+#import "TableViewController.h"
+#import "ScrollViewController.h"
+#import "FormViewController.h"
 
 @interface HomeViewController ()
 
@@ -14,8 +17,29 @@
 
 @implementation HomeViewController
 
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
+    if (item.tag == 0) {
+        TableViewController *tableVC = [self.storyboard instantiateViewControllerWithIdentifier:@"TableViewController"];
+        [tableVC setModalTransitionStyle:UIModalTransitionStyleCoverVertical];
+        [self.navigationController pushViewController:tableVC animated:YES];
+
+    }
+    if (item.tag == 1) {
+        FormViewController *formVC = [self.storyboard instantiateViewControllerWithIdentifier:@"FormViewController"];
+        [formVC setModalTransitionStyle:UIModalTransitionStyleCoverVertical];
+        [self.navigationController pushViewController:formVC animated:YES];
+    }
+    if (item.tag == 2){
+        ScrollViewController *scrollVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ScrollViewController"];
+        [scrollVC setModalTransitionStyle:UIModalTransitionStyleCoverVertical];
+        [self.navigationController pushViewController:scrollVC animated:YES];
+    }
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.navigationController setNavigationBarHidden:YES];
     // Do any additional setup after loading the view, typically from a nib.
 }
 

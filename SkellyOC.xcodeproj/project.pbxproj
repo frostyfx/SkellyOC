@@ -15,6 +15,10 @@
 		B14478F81E313E420052ABB2 /* SkellyOCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B14478F71E313E420052ABB2 /* SkellyOCTests.m */; };
 		B14479031E313E420052ABB2 /* SkellyOCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B14479021E313E420052ABB2 /* SkellyOCUITests.m */; };
 		B1ADCFD81EA94F2700E627CF /* ScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1ADCFD71EA94F2700E627CF /* ScrollViewController.m */; };
+		B1ADCFDC1EAA72A400E627CF /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1ADCFDB1EAA72A400E627CF /* TableViewController.m */; };
+		B1ADCFE11EAA9F5600E627CF /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1ADCFE01EAA9F5600E627CF /* TableCell.xib */; };
+		B1ADCFE31EAAA1AD00E627CF /* TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1ADCFE21EAAA1AD00E627CF /* TableCell.m */; };
+		B1CDA8141EAEE6FC001BAA70 /* FormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CDA8131EAEE6FC001BAA70 /* FormViewController.m */; };
 		B1FB56641EA9119A003E5453 /* SkellyArt in Resources */ = {isa = PBXBuildFile; fileRef = B1FB56631EA9119A003E5453 /* SkellyArt */; };
 		B1FB56661EA918ED003E5453 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1FB56651EA918ED003E5453 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -54,6 +58,13 @@
 		B14479041E313E420052ABB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1ADCFD71EA94F2700E627CF /* ScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewController.m; sourceTree = "<group>"; };
 		B1ADCFD91EA94F6700E627CF /* ScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollViewController.h; sourceTree = "<group>"; };
+		B1ADCFDA1EAA72A400E627CF /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		B1ADCFDB1EAA72A400E627CF /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		B1ADCFE01EAA9F5600E627CF /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
+		B1ADCFE21EAAA1AD00E627CF /* TableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableCell.m; sourceTree = "<group>"; };
+		B1ADCFE41EAAA1CF00E627CF /* TableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableCell.h; sourceTree = "<group>"; };
+		B1CDA8131EAEE6FC001BAA70 /* FormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormViewController.m; sourceTree = "<group>"; };
+		B1CDA8151EAEE71A001BAA70 /* FormViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FormViewController.h; sourceTree = "<group>"; };
 		B1FB56631EA9119A003E5453 /* SkellyArt */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SkellyArt; path = ../../SkellyArt; sourceTree = "<group>"; };
 		B1FB56651EA918ED003E5453 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,10 +119,10 @@
 			children = (
 				B14478E01E313E420052ABB2 /* AppDelegate.h */,
 				B14478E11E313E420052ABB2 /* AppDelegate.m */,
-				B14478E31E313E420052ABB2 /* HomeViewController.h */,
-				B14478E41E313E420052ABB2 /* HomeViewController.m */,
-				B1ADCFD91EA94F6700E627CF /* ScrollViewController.h */,
-				B1ADCFD71EA94F2700E627CF /* ScrollViewController.m */,
+				B1ADCFDE1EAA9EF400E627CF /* HomeView */,
+				B1ADCFDD1EAA9EE000E627CF /* TableView */,
+				B1CDA80F1EAEE681001BAA70 /* FormView */,
+				B1ADCFDF1EAA9EFD00E627CF /* ScrollView */,
 				B14478E61E313E420052ABB2 /* Main.storyboard */,
 				B14478EB1E313E420052ABB2 /* LaunchScreen.storyboard */,
 				B1FB56651EA918ED003E5453 /* Assets.xcassets */,
@@ -146,6 +157,45 @@
 				B14479041E313E420052ABB2 /* Info.plist */,
 			);
 			path = SkellyOCUITests;
+			sourceTree = "<group>";
+		};
+		B1ADCFDD1EAA9EE000E627CF /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				B1ADCFDA1EAA72A400E627CF /* TableViewController.h */,
+				B1ADCFDB1EAA72A400E627CF /* TableViewController.m */,
+				B1ADCFE01EAA9F5600E627CF /* TableCell.xib */,
+				B1ADCFE41EAAA1CF00E627CF /* TableCell.h */,
+				B1ADCFE21EAAA1AD00E627CF /* TableCell.m */,
+			);
+			name = TableView;
+			sourceTree = "<group>";
+		};
+		B1ADCFDE1EAA9EF400E627CF /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				B14478E31E313E420052ABB2 /* HomeViewController.h */,
+				B14478E41E313E420052ABB2 /* HomeViewController.m */,
+			);
+			name = HomeView;
+			sourceTree = "<group>";
+		};
+		B1ADCFDF1EAA9EFD00E627CF /* ScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				B1ADCFD91EA94F6700E627CF /* ScrollViewController.h */,
+				B1ADCFD71EA94F2700E627CF /* ScrollViewController.m */,
+			);
+			name = ScrollView;
+			sourceTree = "<group>";
+		};
+		B1CDA80F1EAEE681001BAA70 /* FormView */ = {
+			isa = PBXGroup;
+			children = (
+				B1CDA8151EAEE71A001BAA70 /* FormViewController.h */,
+				B1CDA8131EAEE6FC001BAA70 /* FormViewController.m */,
+			);
+			name = FormView;
 			sourceTree = "<group>";
 		};
 		B1FB56621EA9115F003E5453 /* Images */ = {
@@ -223,6 +273,7 @@
 				TargetAttributes = {
 					B14478D91E313E420052ABB2 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					B14478F21E313E420052ABB2 = {
@@ -266,6 +317,7 @@
 				B14478ED1E313E420052ABB2 /* LaunchScreen.storyboard in Resources */,
 				B1FB56661EA918ED003E5453 /* Assets.xcassets in Resources */,
 				B14478E81E313E420052ABB2 /* Main.storyboard in Resources */,
+				B1ADCFE11EAA9F5600E627CF /* TableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,9 +342,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1ADCFE31EAAA1AD00E627CF /* TableCell.m in Sources */,
 				B14478E51E313E420052ABB2 /* HomeViewController.m in Sources */,
 				B14478E21E313E420052ABB2 /* AppDelegate.m in Sources */,
 				B14478DF1E313E420052ABB2 /* main.m in Sources */,
+				B1CDA8141EAEE6FC001BAA70 /* FormViewController.m in Sources */,
+				B1ADCFDC1EAA72A400E627CF /* TableViewController.m in Sources */,
 				B1ADCFD81EA94F2700E627CF /* ScrollViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,10 +497,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SkellyOC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = frostyFX.SkellyOC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SkellyOC/SkellyOC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -453,10 +512,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SkellyOC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = frostyFX.SkellyOC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SkellyOC/SkellyOC-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

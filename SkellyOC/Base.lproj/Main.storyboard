@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jhh-YV-0BN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,10 +9,26 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="gf6-AG-fsR">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="jhh-YV-0BN" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qfk-dd-2DV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="UgQ-6t-Udt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xhc-1s-5v9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-663" y="124"/>
+        </scene>
         <!--HomeViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" title="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hpg-lT-YXb"/>
                         <viewControllerLayoutGuide type="bottom" id="nxh-J3-fKa"/>
@@ -21,72 +37,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E4C-0b-gvB">
-                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Jack" translatesAutoresizingMaskIntoConstraints="NO" id="kKW-sl-Awe">
+                                <rect key="frame" x="0.0" y="-10" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m4w-Wo-Ojg">
+                                <rect key="frame" x="0.0" y="615" width="375" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <tabBarItem id="jyC-6b-s31"/>
-                                    <tabBarItem title="Item" id="Hay-U2-uzt"/>
-                                    <tabBarItem title="Item" id="txd-Zb-1IA"/>
-                                    <tabBarItem systemItem="more" id="ONT-5M-Jf5"/>
+                                    <tabBarItem title="TableView" image="table.png" id="zX2-fy-K1z"/>
+                                    <tabBarItem tag="1" title="FormView" image="formIcon.png" id="2a9-tI-Sbl"/>
+                                    <tabBarItem tag="2" title="ScrollView" image="scroller.png" id="kx3-Dt-i5x"/>
                                 </items>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="E4c-SB-U53"/>
+                                </connections>
                             </tabBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Jack" translatesAutoresizingMaskIntoConstraints="NO" id="kKW-sl-Awe">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Where would you like to go?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T6x-cl-QTA">
-                                <rect key="frame" x="5" y="108" width="204" height="30"/>
+                                <rect key="frame" x="3" y="98" width="204" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oq3-Uh-o4P">
-                                <rect key="frame" x="188" y="513" width="187" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="X3K-eW-NmL" kind="popoverPresentation" popoverAnchorView="oq3-Uh-o4P" id="Cay-M5-tGJ">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZk-eN-9az">
-                                <rect key="frame" x="188" y="584" width="187" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="NoC-YT-RWv" kind="popoverPresentation" popoverAnchorView="BZk-eN-9az" id="vl2-tt-PE1">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xl-UL-YtA">
-                                <rect key="frame" x="188" y="442" width="187" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="u8k-gL-4v3" kind="popoverPresentation" popoverAnchorView="5Xl-UL-YtA" id="PQc-Fl-dJy">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Wp6-9k-DzL"/>
+                    <navigationItem key="navigationItem" id="teb-tH-kdI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.60000000000001" y="123.68815592203899"/>
         </scene>
-        <!--View Controller-->
+        <!--TableViewController-->
         <scene sceneID="e8Z-w4-aAz">
             <objects>
-                <viewController id="u8k-gL-4v3" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TableViewController" title="TableViewController" id="u8k-gL-4v3" customClass="TableViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9yR-Dy-4Bn"/>
                         <viewControllerLayoutGuide type="bottom" id="AVe-WH-2TG"/>
@@ -100,24 +88,23 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <tabBarItem title="Home" id="rwQ-BL-nL7" customClass="Home"/>
-                                    <tabBarItem systemItem="more" id="Ku9-Pa-2EZ"/>
+                                    <tabBarItem title="Home" image="homeIcon.png" id="rwQ-BL-nL7"/>
+                                    <tabBarItem tag="1" title="Back" image="backIcon.png" id="nmh-c1-zJh"/>
+                                    <tabBarItem tag="2" title="FormView" image="formIcon.png" id="v8W-gD-BrZ"/>
+                                    <tabBarItem tag="3" title="ScrollView" image="scroller.png" id="wik-4c-VJX"/>
                                 </items>
+                                <connections>
+                                    <outlet property="delegate" destination="u8k-gL-4v3" id="04h-at-ObT"/>
+                                </connections>
                             </tabBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6fl-eh-Ufk">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6fl-eh-Ufk">
+                                <rect key="frame" x="0.0" y="28" width="375" height="590"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dYP-uG-WcN">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dYP-uG-WcN" id="lfA-9q-uLw">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="u8k-gL-4v3" id="Tr8-iu-26I"/>
+                                    <outlet property="delegate" destination="u8k-gL-4v3" id="h8e-fh-dNJ"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -127,10 +114,10 @@
             </objects>
             <point key="canvasLocation" x="808.79999999999995" y="123.68815592203899"/>
         </scene>
-        <!--View Controller-->
+        <!--FormViewController-->
         <scene sceneID="KFZ-Mw-val">
             <objects>
-                <viewController id="X3K-eW-NmL" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FormViewController" title="FormViewController" id="X3K-eW-NmL" customClass="FormViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ROw-BT-jKj"/>
                         <viewControllerLayoutGuide type="bottom" id="EH4-ny-ATc"/>
@@ -139,27 +126,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oGq-30-Ees">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please enter your name and today's date." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MtO-2I-qoE">
+                                <rect key="frame" x="0.0" y="60" width="375" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iVu-cs-fSk">
+                                <rect key="frame" x="16" y="137" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="30" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCD-W9-jjP">
+                                <rect key="frame" x="0.0" y="207" width="375" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="-31542005.954986989">
+                                    <!--2000-01-01 22:19:54 +0000-->
+                                </date>
+                            </datePicker>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cnU-R9-ZOC">
                                 <rect key="frame" x="0.0" y="615" width="375" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <tabBarItem title="Home" id="vgq-3B-KiN" customClass="Home"/>
-                                    <tabBarItem systemItem="more" id="C78-fP-9Tw"/>
+                                    <tabBarItem title="Home" image="homeIcon.png" id="bUL-rv-rz4"/>
+                                    <tabBarItem tag="1" title="Back" image="backIcon.png" id="imU-cO-PO5"/>
+                                    <tabBarItem tag="2" title="TableView" image="table.png" id="k1o-ci-cRy"/>
+                                    <tabBarItem tag="3" title="ScrollView" image="scroller.png" id="pnm-rH-ts1"/>
                                 </items>
+                                <connections>
+                                    <outlet property="delegate" destination="X3K-eW-NmL" id="Le5-Ia-WKw"/>
+                                </connections>
                             </tabBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMb-nt-AjG">
+                                <rect key="frame" x="105" y="450" width="64" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="X3K-eW-NmL" eventType="touchUpInside" id="30P-hN-UOr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YvL-2V-n8A">
+                                <rect key="frame" x="207" y="450" width="63.999999999999936" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="X3K-eW-NmL" eventType="touchUpInside" id="SIj-rD-xok"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="H9l-D5-t4K"/>
+                    <connections>
+                        <outlet property="myDate" destination="UCD-W9-jjP" id="IGm-oq-ZBn"/>
+                        <outlet property="myText" destination="iVu-cs-fSk" id="hKA-kk-Zd0"/>
+                        <outlet property="resetButton" destination="ZMb-nt-AjG" id="Ylj-Xy-8My"/>
+                        <outlet property="submitButton" destination="YvL-2V-n8A" id="7La-NC-c6d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uoP-hr-dax" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="118" y="894"/>
+            <point key="canvasLocation" x="117.59999999999999" y="975.56221889055485"/>
         </scene>
         <!--ScrollViewController-->
         <scene sceneID="m3m-LL-R9n">
             <objects>
-                <viewController title="ScrollViewController" id="NoC-YT-RWv" customClass="ScrollViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScrollViewController" title="ScrollViewController" id="NoC-YT-RWv" customClass="ScrollViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5eo-WK-wkQ"/>
                         <viewControllerLayoutGuide type="bottom" id="rXE-Dq-Gfz"/>
@@ -275,22 +311,25 @@
                                 </constraints>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </scrollView>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KqJ-Sx-14D">
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BOK-Zv-RmY">
                                 <rect key="frame" x="0.0" y="1151" width="375" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <tabBarItem title="Home" id="tao-Uw-2ti"/>
-                                    <tabBarItem systemItem="more" id="MBb-Gg-R7b"/>
+                                    <tabBarItem title="Home" image="homeIcon.png" id="H05-JB-PUe"/>
+                                    <tabBarItem tag="1" title="Back" image="backIcon.png" id="0Ea-HC-7oa"/>
+                                    <tabBarItem tag="2" title="TableView" image="table.png" id="aAC-dt-Dhx"/>
+                                    <tabBarItem tag="3" title="FormView" image="formIcon.png" id="pWa-7X-bIv"/>
                                 </items>
+                                <connections>
+                                    <outlet property="delegate" destination="NoC-YT-RWv" id="Rnw-ac-pvR"/>
+                                </connections>
                             </tabBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Jik-WN-OhX" firstAttribute="leading" secondItem="KqJ-Sx-14D" secondAttribute="leading" id="1Vq-F7-l8W"/>
                             <constraint firstAttribute="trailing" secondItem="Jik-WN-OhX" secondAttribute="trailing" id="BMT-5K-td1"/>
                             <constraint firstItem="Jik-WN-OhX" firstAttribute="top" secondItem="8Ke-fL-XMD" secondAttribute="top" id="P6N-TA-KHJ"/>
-                            <constraint firstItem="Jik-WN-OhX" firstAttribute="bottom" secondItem="KqJ-Sx-14D" secondAttribute="top" id="V8y-yh-Gdb"/>
-                            <constraint firstItem="Jik-WN-OhX" firstAttribute="trailing" secondItem="KqJ-Sx-14D" secondAttribute="trailing" id="ucc-6y-uJj"/>
                             <constraint firstItem="Jik-WN-OhX" firstAttribute="leading" secondItem="8Ke-fL-XMD" secondAttribute="leading" id="v7Q-mf-YI8"/>
                             <constraint firstAttribute="bottom" secondItem="Jik-WN-OhX" secondAttribute="bottom" constant="49" id="z1u-8I-p6Q"/>
                         </constraints>
@@ -300,11 +339,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gOl-2c-3Os" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="788" y="1133.433283358321"/>
+            <point key="canvasLocation" x="809" y="1215"/>
         </scene>
     </scenes>
     <resources>
         <image name="Jack" width="653" height="1023"/>
+        <image name="backIcon.png" width="30" height="30"/>
         <image name="excitedHusky.jpg" width="500" height="393"/>
+        <image name="formIcon.png" width="30" height="30"/>
+        <image name="homeIcon.png" width="30" height="30"/>
+        <image name="scroller.png" width="30" height="30"/>
+        <image name="table.png" width="30" height="30"/>
     </resources>
 </document>

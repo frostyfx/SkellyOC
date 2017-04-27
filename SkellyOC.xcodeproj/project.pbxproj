@@ -65,7 +65,7 @@
 		B1ADCFE41EAAA1CF00E627CF /* TableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableCell.h; sourceTree = "<group>"; };
 		B1CDA8131EAEE6FC001BAA70 /* FormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormViewController.m; sourceTree = "<group>"; };
 		B1CDA8151EAEE71A001BAA70 /* FormViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FormViewController.h; sourceTree = "<group>"; };
-		B1FB56631EA9119A003E5453 /* SkellyArt */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SkellyArt; path = ../../SkellyArt; sourceTree = "<group>"; };
+		B1FB56631EA9119A003E5453 /* SkellyArt */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SkellyArt; path = ../SkellyArt; sourceTree = "<group>"; };
 		B1FB56651EA918ED003E5453 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
